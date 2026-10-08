@@ -2,6 +2,8 @@
 
 A pixel-matched TypeScript build of the **Realtor360** real-estate CRM design from Figma. It covers both frames in the prototype: the **Home dashboard** and the **All Contacts** page.
 
+**Live:** https://realtor360-alpha.vercel.app (try [`/contacts`](https://realtor360-alpha.vercel.app/contacts) too)
+
 ![Dashboard at 1440px](docs/screenshots/dashboard.png)
 
 | All Contacts (1440px) | Dashboard (390px) |
@@ -88,4 +90,4 @@ src/
 
 ## Deploying
 
-The project is a static SPA. `vercel.json` rewrites every path to `index.html`, so client-side routes work on Vercel. On Netlify, use the same build (`npm run build`, publish `dist`).
+Live on Vercel at https://realtor360-alpha.vercel.app. The project is a static SPA, and `vercel.json` rewrites every path to `index.html` so client-side routes like `/contacts` survive a refresh. To redeploy from the CLI: `npx vercel deploy --prod`.
