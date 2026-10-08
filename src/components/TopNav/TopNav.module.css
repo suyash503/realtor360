@@ -1,0 +1,145 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  height: var(--nav-height);
+  padding: 0 31px 0 25px;
+  background: var(--surface);
+  box-shadow: var(--shadow-nav);
+}
+
+.brand {
+  flex: none;
+  margin-top: 16px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  margin: 11px 0 0 23.5px;
+}
+
+.item {
+  flex: none;
+  height: 42px;
+  padding: 0 12.25px;
+  border-radius: 10px;
+  font-family: var(--font-nav);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 42px;
+  color: var(--ink);
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.item:hover {
+  background: var(--highlight);
+}
+
+/* The active pill is 1px wider than the label box in the design. */
+.active,
+.active:hover {
+  margin: 0 -0.5px;
+  padding: 0 12.75px;
+  background: var(--gold);
+  color: var(--surface);
+}
+
+.more {
+  display: grid;
+  place-items: center;
+  width: 38.8px;
+  height: 42px;
+  color: var(--ink);
+  border-radius: 10px;
+}
+
+.more:hover {
+  background: var(--highlight);
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start;
+  margin-left: auto;
+}
+
+.search {
+  position: relative;
+  display: block;
+  width: 152px;
+  height: 42px;
+  margin-top: 11px;
+  border-radius: 10px;
+  background: var(--page);
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 10px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  outline-offset: 0;
+}
+
+.search input::placeholder {
+  color: var(--placeholder);
+  opacity: 1;
+}
+
+.search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 8.33px;
+  right: 9.8px;
+  width: 25.39px;
+  height: 25.39px;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 0 25px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.caret {
+  margin-left: 10.5px;
+  color: #000;
+}
+
+@media (max-width: 1360px) {
+  .menu {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .search {
+    width: 130px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search {
+    display: none;
+  }
+}
