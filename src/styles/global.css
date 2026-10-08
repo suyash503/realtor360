@@ -1,0 +1,114 @@
+/*
+ * Design tokens taken from the Realtor360 Figma file (1440px frames).
+ * Measured off a 2x render of the prototype; see README "How it was matched".
+ */
+:root {
+  --gold: #d4af37;
+  --ink: #2c2c2c;
+  --muted: #666666;
+  --placeholder: #777777;
+  --page: #f6f8fa;
+  --surface: #ffffff;
+  --highlight: #f8f5eb;
+  --grid-line: #bbbbbb;
+  --bubble: #d9d9d9;
+
+  /* chart series */
+  --series-1: #d4af37;
+  --series-2: #eedfaf;
+  --series-3: #f6efd7;
+  --series-4: #ebd17d;
+
+  /* schedule / calendar accents */
+  --accent-teal: #0eeabe;
+  --accent-pink: #e192ae;
+  --accent-yellow: #ffe100;
+
+  /* trend + status chips */
+  --up-bg: #dafff7;
+  --up-fg: #48b998;
+  --down-bg: #fef0f2;
+  --down-fg: #c02547;
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-nav: 'Manrope', var(--font-sans);
+
+  --radius-card: 20px;
+  --shadow-card: 2px 4px 4px rgba(0, 0, 0, 0.1);
+  --shadow-nav: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --nav-height: 65px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  min-width: 320px;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
