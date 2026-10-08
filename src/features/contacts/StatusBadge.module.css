@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  height: 25px;
+  padding: 0 16.5px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--ink);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.active {
+  border-color: #0dd112;
+  background: #e9f7ef;
+}
+
+.progress {
+  border-color: #f2c94c;
+  background: #fff9e6;
+}
+
+.converted {
+  border-color: #2d9cdb;
+  background: #eaf4fb;
+}
+
+.cold {
+  border-color: #828282;
+  background: #f4f4f4;
+}
+
+.lost {
+  border-color: #eb5757;
+  background: #fdeeee;
+}

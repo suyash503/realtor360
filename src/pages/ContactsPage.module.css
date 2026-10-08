@@ -1,0 +1,257 @@
+.layout {
+  display: grid;
+  grid-template-columns: 296px minmax(0, 1fr);
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.main {
+  min-width: 0;
+  padding: 22.23px 25px 34px 38px;
+}
+
+.header {
+  margin: 0 -25px 0 -38px;
+  padding: 0 25px 13px 38px;
+  border-bottom: 1px solid #d7d9db;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14.77px;
+}
+
+.create {
+  display: inline-flex;
+  align-items: center;
+  gap: 6.62px;
+  width: 150px;
+  height: 29px;
+  padding-left: 10.5px;
+  border-radius: 5px;
+  background: var(--gold);
+  color: var(--surface);
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.create:hover {
+  filter: brightness(0.95);
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 0;
+}
+
+.search {
+  position: relative;
+  display: block;
+  width: 267px;
+  max-width: 100%;
+  height: 31px;
+  border-radius: 5px;
+  background: #ededed;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 10px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  outline-offset: 0;
+}
+
+.search input::placeholder {
+  color: var(--placeholder);
+  opacity: 1;
+}
+
+.search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 2.83px;
+  right: 9.78px;
+  width: 25.39px;
+  height: 25.39px;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.view,
+.actions {
+  display: inline-flex;
+  align-items: center;
+  height: 31px;
+  border-radius: 5px;
+  background: var(--highlight);
+  color: #000;
+}
+
+.view {
+  gap: 11px;
+  width: 53px;
+  padding-left: 8.5px;
+}
+
+.gridIcon {
+  color: #080341;
+}
+
+.actions {
+  gap: 8.15px;
+  width: 79px;
+  padding-top: 2px;
+  padding-left: 4.65px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.actions svg {
+  margin-top: -3px;
+  color: #000;
+}
+
+.view:hover,
+.actions:hover {
+  background: #f1ecda;
+}
+
+.tableWrap {
+  margin-top: 21px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 960px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.table thead th {
+  height: 49px;
+  padding: 1px 0 0;
+  background: var(--surface);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 47.6px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.table thead th:first-child {
+  padding-left: 16.7px;
+  border-radius: 10px 0 0 10px;
+}
+
+.table thead th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.table tbody tr {
+  height: 91px;
+}
+
+.table tbody tr:first-child {
+  height: 95px;
+}
+
+.table tbody th,
+.table tbody td {
+  padding: 27.09px 0 0;
+  border-bottom: 0.5px solid #979798;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #000;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.table tbody tr:first-child > * {
+  border-top: 4px solid transparent;
+}
+
+.table tbody th {
+  padding: 21.32px 0 0 16.7px;
+}
+
+.name {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.email {
+  display: block;
+  margin-top: 4.27px;
+  color: var(--placeholder);
+  letter-spacing: -0.15px;
+}
+
+.email b {
+  font-weight: 600;
+}
+
+.table tbody .phone {
+  letter-spacing: 0.25px;
+}
+
+.table tbody .statusCell {
+  padding-top: 27px;
+}
+
+.table tbody .empty {
+  padding: 40px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* The pager sits 356px into the 1081px table in the design. */
+.pager {
+  margin-top: 105px;
+  padding-left: 32.93%;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .main {
+    padding: 20px 16px 32px;
+  }
+  .header {
+    margin: 0 -16px;
+    padding: 0 16px 13px;
+  }
+  .pager {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
