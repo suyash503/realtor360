@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 11.5px 0 9.5px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.arrow {
+  margin-left: 2.5px;
+}
+
+.up {
+  background: var(--up-bg);
+  color: var(--up-fg);
+}
+
+.down {
+  background: var(--down-bg);
+  color: var(--down-fg);
+}

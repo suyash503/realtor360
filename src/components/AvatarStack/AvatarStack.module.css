@@ -1,0 +1,46 @@
+.stack {
+  display: inline-flex;
+  align-items: center;
+}
+
+.face {
+  flex: none;
+  border: 1px solid var(--surface);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.more {
+  display: grid;
+  place-items: center;
+  background: var(--bubble);
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* 26px photo with a 1px ring drawn outside it, 20px apart. */
+.md .face {
+  width: 28px;
+  height: 28px;
+}
+
+.md .face + .face {
+  margin-left: -8px;
+}
+
+.md .more {
+  font-size: 11px;
+}
+
+.sm .face {
+  width: 20px;
+  height: 20px;
+}
+
+.sm .face + .face {
+  margin-left: -10px;
+}
+
+.sm .more {
+  font-size: 8px;
+}

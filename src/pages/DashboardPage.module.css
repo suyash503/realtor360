@@ -1,0 +1,97 @@
+/*
+ * 1440px frame: 26px left gutter, 25px right gutter, 15px column gap, 10px row gap.
+ * fr values are the design widths, so at 1440 every column lands on its Figma pixel.
+ */
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1085fr) minmax(0, 289fr);
+  column-gap: 15px;
+  align-items: start;
+  padding: 20px 25px 20px 26px;
+}
+
+.main,
+.side,
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 810fr) minmax(0, 258fr);
+  gap: 17px;
+}
+
+/* Chart cards draw their SVG in card coordinates, under the HTML title. */
+.chartCard :global(.chart) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chartCard h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.tall {
+  height: 334px;
+}
+
+.owner {
+  height: 196px;
+}
+
+.stages {
+  padding-left: 20px;
+}
+
+@media (max-width: 1280px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 10px;
+  }
+  .side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .charts,
+  .bottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 16px;
+  }
+  .kpis,
+  .side {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

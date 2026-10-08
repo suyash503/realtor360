@@ -1,0 +1,48 @@
+.card {
+  height: 100px;
+  min-width: 0;
+  padding: 10px 13px 0;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.iconWrap {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--page);
+}
+
+.label {
+  margin-top: 9px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 20px;
+  margin-top: 17.5px;
+  padding-left: 0.5px;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+}

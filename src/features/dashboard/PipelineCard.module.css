@@ -1,0 +1,47 @@
+.card {
+  height: 334px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 23px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 0 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table th {
+  line-height: 33px;
+  font-weight: 500;
+  background: var(--page);
+}
+
+.table th:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.table th:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.table tbody tr:first-child td {
+  padding-top: 4px;
+}
+
+.table td {
+  line-height: 37px;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.table .num {
+  padding-right: 14.5px;
+  text-align: right;
+}

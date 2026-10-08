@@ -1,0 +1,143 @@
+.card {
+  height: 697px;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  padding: 16.4px 20.5px 0 15.7px;
+}
+
+.month {
+  flex: 1;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.nav {
+  flex: none;
+  margin: 4px -6px 0;
+  padding: 6px;
+  border-radius: 6px;
+  color: #000;
+}
+
+.nav + .nav {
+  margin-left: 35px;
+}
+
+.nav:hover {
+  background: var(--highlight);
+}
+
+.grid {
+  margin: 31.47px 0 0 -2.5px;
+  font-size: 12px;
+}
+
+/* Column centres follow the Figma frame exactly (they are not evenly spaced). */
+.week {
+  display: grid;
+  grid-template-columns: 42px 42.45px 42.75px 43.05px 42.25px 41px 41.5px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.weekday {
+  font-weight: 400;
+  color: #000;
+}
+
+.day {
+  color: #121212;
+}
+
+.dayNum {
+  position: relative;
+  display: inline-block;
+  line-height: 15px;
+}
+
+.today {
+  width: 15px;
+  border-radius: 3px;
+  background: var(--gold);
+}
+
+.marked::after {
+  content: '';
+  position: absolute;
+  top: 14.37px;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.marked.visit::after {
+  background: var(--accent-teal);
+}
+
+.marked.followUp::after {
+  background: var(--accent-pink);
+}
+
+.marked.submission::after {
+  background: var(--accent-yellow);
+}
+
+.schedule {
+  margin-top: 11.63px;
+  padding: 13.82px 13px 0 10.6px;
+  border-top: 0.5px solid var(--placeholder);
+}
+
+.scheduleTitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15.18px;
+}
+
+.event {
+  margin-left: 0.4px;
+  padding: 8.59px 0 9.41px 8.15px;
+  border-left: 2px solid;
+  border-radius: 11px 0 0 11px;
+}
+
+.event.visit {
+  border-color: var(--accent-teal);
+}
+
+.event.followUp {
+  border-color: var(--accent-pink);
+}
+
+.event.submission {
+  border-color: var(--accent-yellow);
+}
+
+.eventTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.eventDetail {
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--muted);
+}
